@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Testimonials = () => {
   return (
     // Section as a flex container to center its content
-    <section id='testimonials' className='w-full flex flex-col justify-center items-center py-20'>
+    <section id='testimonials' className='w-full flex flex-col justify-center items-center pt-10'>
      <h1 className='rubik-dirt text-4xl text-black mb-0'>Testimonials</h1>
       <div className='relative w-full min-h-screen flex items-center justify-center'>
         {/* Testimonial GIF 1 */}

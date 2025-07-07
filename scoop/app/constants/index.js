@@ -38,17 +38,22 @@ const openingHours = [
 const socials = [
  {
 	name: "Instagram",
-	icon: "/images/insta.png",
+	icon: "/insta.png",
 	url: "#",
  },
  {
 	name: "X (Twitter)",
-	icon: "/images/x.png",
+	icon: "/x.png",
 	url: "#",
  },
  {
 	name: "Facebook",
-	icon: "/images/fb.png",
+	icon: "/fb.png",
+	url: "#",
+ },
+ {
+	name: "Youtube",
+	icon: "/youtube.png",
 	url: "#",
  },
 ];
@@ -56,35 +61,50 @@ const socials = [
 const sliderLists = [
   {
     id: 1,
-    name: "Classic Virgin Mojito",
-    image: "/images/drink1.png",
-    title: "Simple Ingredients, Bold Flavor",
+    name: "Berry Bliss",
+    image: "/Shop/berry.png",
+    title: "A Symphony of Summer Berries",
     description:
-      "A refreshing blend of muddled mint, fresh lime juice, and a touch of sweetness, topped with sparkling soda water. All the flavor of the classic, just without the rum.",
+      "Dive into a delightful swirl of the freshest, juiciest organic berries. This vibrant, fruit-forward ice cream is a blissful escape into a summer meadow."
   },
-  {
+      {
     id: 2,
-    name: "Raspberry Nojito",
-    image: "/images/drink2.png",
-    title: "A Zesty Classic That Never Fails",
+    name: "Vanilla Vibe",
+    image: "/Shop/vanilla.png",
+    title: "Pure & Creamy Classic",
     description:
-      "This vibrant mocktail balances sweet raspberries with tangy lime and fresh mint, creating a crisp and refreshing drink that's perfect for any occasion.",
+      "Experience the pure, aromatic essence of real organic vanilla beans in a luxuriously creamy coconut milk base. It's a timeless classic, perfected.",
   },
   {
     id: 3,
-    name: "Enchanted Garden",
-    image: "/images/drink3.png",
-    title: "A Floral-Infused Delight",
+    name: "Mocha Magic",
+    image: "/Shop/mocha.png",
+    title: "The Perfect Brew-tiful Balance",
     description:
       "A magical mix of elderflower cordial, a hint of lavender, and fresh lemon juice, topped with lemonade for a sparkling, non-alcoholic botanical treat.",
   },
   {
     id: 4,
-    name: "Blue Lagoon Sparkler",
-    image: "/images/drink4.png",
-    title: "Crafted With Care, Poured With Love",
+    name: "Pistachi-Oh!",
+    image: "/Shop/green.png",
+    title: "A Nutty, Rich & Toasty Treat",
     description:
-      "A dazzling non-alcoholic drink made with blue curaçao syrup, fresh pineapple juice, and a squeeze of lime, topped with soda for a brilliant, bubbly finish.",
+      'Say "oh!" to the irresistible taste of real, roasted organic pistachios. This nutty, subtly sweet, and wonderfully green ice cream is a true delight.',
+  },
+  {
+    id: 5,
+    name: "Unicorn Swril",
+    image: "/Shop/swirl.png",
+    title: " A Fantastical Fusion of Fruity Fun",
+    description:
+      "Unleash your inner child with this magical swirl of natural fruit flavors and vibrant, plant-based colors. It's a whimsical, sweet, and utterly enchanting treat for all ages.",
+  },{
+    id: 6,
+    name: "Cosmic Cocoa",
+    image: "/Shop/choco.png",
+    title: "A Deep & Dreamy Chocolate Experience",
+    description:
+      'Blast off into a universe of rich, dark, and decadent cocoa. Made with the finest organic cacao, this intensely chocolatey ice cream is an out-of-this-world experience.',
   },
 ];
 
