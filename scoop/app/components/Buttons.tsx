@@ -10,7 +10,7 @@ const CartButton = () => {
     <button
       className={`group relative z-20 cursor-pointer flex items-center justify-center gap-2 px-2 py-2 text-base font-bold transition-all duration-300 overflow-hidden
         ${isHovered ? "animate-wobble" : ""}
-        before:absolute before:inset-0 before:bg-cyan-300 before:opacity-90
+        before:absolute before:inset-0 before:bg-[#90ccc7] before:opacity-90
         after:absolute after:inset-0  after:opacity-20
         hover:shadow-xl hover:shadow-black/20
         focus:outline-none focus:ring-4 focus:ring-to-[#ffb300]
