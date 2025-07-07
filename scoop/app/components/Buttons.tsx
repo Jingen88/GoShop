@@ -2,6 +2,8 @@ import React from 'react'
 import { FaShoppingCart } from 'react-icons/fa';
 import { IoIceCream } from 'react-icons/io5';
 import { useState } from 'react';
+import Link from 'next/link';
+
 
 const CartButton = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -64,9 +66,9 @@ const ShopButton = () => {
         className={`text-base text-black transform transition-transform duration-300 ${isHovered ? "rotate-12" : ""}`}
         aria-hidden="true"
       />
-      <span className="relative text-black rubik-dirt uppercase tracking-wider text-shadow-lg transform transition-transform duration-300 group-hover:scale-105">
+      <Link href="#shop" className="relative text-black rubik-dirt uppercase tracking-wider text-shadow-lg transform transition-transform duration-300 group-hover:scale-105">
         Scoop Shop
-      </span>
+      </Link>
     </button>
   );
 };

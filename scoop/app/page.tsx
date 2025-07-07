@@ -8,6 +8,8 @@ import Shop from './Home/Shop'
 import Footer from './Home/Footer'
 
 
+
+
 const page = () => {
   return (
     <>
