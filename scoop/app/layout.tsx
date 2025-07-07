@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Rubik_Dirt } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +10,7 @@ const geistSans = Geist({
 const rubikdirt = Rubik_Dirt({
   variable: "--font-rubik-dirt",
   subsets: ["latin"],
+  weight: "400",
 });
 
 

@@ -1,23 +1,32 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import navLinks from '../constants'
+import Link from 'next/link'
+import { CartButton } from '../components/Buttons'
+
+
 
 
 const Navbar = () => {
   return (
     <nav>
-         <div>
-            <a href="#home" className="flex items-center gap-2">
-            <Image src="/logo.png" alt="logo" />
-            
-            </a>
-<ul>
+         <div className='dripping flex flex-row items-center justify-between px-3'>
+            <Link href="#home" className="flex items-center gap-2">
+            <Image src="/logo.png" alt="logo" width={200} height={200} />
+            </Link>
+<ul className='flex items-center gap-12 text-lg font-semibold text-black rubik-dirt'>
    {navLinks.map((link) => (
 <li key={link.id}>
-<a href='#${link.id}'>{link.title}</a>
+<Link href='#${link.id}'
+className=' rubik-dirt transition-all duration-300 ease-in-out hover:scale-110 hover:text-shadow-sprinkles inline-block'>
+{link.title}
+</Link>
 </li>
    ))}
 </ul>
+
+<CartButton/>
 
 
         </div>

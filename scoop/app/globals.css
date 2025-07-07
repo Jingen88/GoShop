@@ -1,7 +1,30 @@
 @import "tailwindcss";
 
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+    background: #ffb300;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+}
+
+
 .rubik-dirt{
   font-family: "Rubik Dirt", system-ui;
   font-weight: 400;
   font-style: normal;
 }
+
+
+.noisy {
+        @apply absolute inset-0 size-full object-fill bg-[url("/texture.png")];
+    }
+
+  .dripping {
+        @apply z-20 size-full object-fill bg-[url("/dripping-mask.png")];
+    }

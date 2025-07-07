@@ -89,11 +89,6 @@ const sliderLists = [
 ];
 
 export {
- cocktailLists,
- mockTailLists,
- profileLists,
- featureLists,
- goodLists,
  openingHours,
  storeInfo,
  socials,
