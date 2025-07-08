@@ -130,15 +130,14 @@ const sliderLists = [
 
 const normalizedSliderLists = sliderLists.map(item => ({
   ...item,
-  price: parseFloat(item.price) // Convert to number once
+  price: parseFloat(item.price) // Convert string price to number
 }));
 
-// Then export the normalized version
-export { normalizedSliderLists as sliderLists };
+
 
 export {
  openingHours,
  storeInfo,
  socials,
- sliderLists,
+ normalizedSliderLists as sliderLists 
 };
