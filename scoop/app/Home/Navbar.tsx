@@ -66,7 +66,7 @@ const Navbar = () => {
 
   return (
     // Navbar with fixed position and initially hidden (opacity-0)
-    <nav className="bg-[#ffb300]/90 fixed top-0 w-full z-30 opacity-0 backdrop-blur-sm">
+    <nav className="bg-[#ffb300]/90 fixed top-0 w-[98%] z-30 opacity-0 backdrop-blur-sm">
           <div className='flex flex-row items-center justify-between px-4 max-w-screen-xl mx-auto py-3'>
             <Link href="#home" className="flex items-center gap-2">
             {/* Navbar logo with a class for targeting */}
