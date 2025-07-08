@@ -58,7 +58,7 @@ const Chat: React.FC = () => {
         setIsLoading(false);
       }, 750); // 0.75 second delay
     }
-  }, [isOpen]); // This effect runs whenever the 'isOpen' state changes.
+  }, [isOpen,messages.length]); // This effect runs whenever the 'isOpen' state changes.
 
   // Function to handle sending a message
   const handleSendMessage = async () => {

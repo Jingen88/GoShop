@@ -65,8 +65,8 @@ const sliderLists = [
     image: "/Shop/berry.png",
     title: "A Symphony of Summer Berries",
     tub: "/tubs/berrybliss.png",
-    price:'3.99£',
-    measurements: "500ml",
+    price:'3.99',
+    measurements: "500",
     description:
       "Dive into a delightful swirl of the freshest, juiciest organic berries. This vibrant, fruit-forward ice cream is a blissful escape into a summer meadow."
   },
@@ -76,8 +76,8 @@ const sliderLists = [
     image: "/Shop/vanilla.png",
     title: "Pure & Creamy Classic",
     tub: "/tubs/vanillavibe.png",
-    measurements: "500ml",
-    price:'3.99£',
+    measurements: "500",
+    price:'3.99',
     description:
       "Experience the pure, aromatic essence of real organic vanilla beans in a luxuriously creamy coconut milk base. It's a timeless classic, perfected.",
   },
@@ -87,8 +87,8 @@ const sliderLists = [
     image: "/Shop/mocha.png",
     title: "The Perfect Brew-tiful Balance",
     tub: "/tubs/mochamagic.png",
-    measurements: "500ml",
-    price:'3.99£',
+    measurements: "500",
+    price:'3.99',
     description:
       "A magical mix of elderflower cordial, a hint of lavender, and fresh lemon juice, topped with lemonade for a sparkling, non-alcoholic botanical treat.",
   },
@@ -98,8 +98,8 @@ const sliderLists = [
     image: "/Shop/green.png",
     title: "A Nutty, Rich & Toasty Treat",
     tub: "/tubs/Pistachiohice.png",
-    measurements: "500ml",
-    price:'3.99£',
+    measurements: "500",
+    price:'3.99',
     description:
       'Say "oh!" to the irresistible taste of real, roasted organic pistachios. This nutty, subtly sweet, and wonderfully green ice cream is a true delight.',
   },
@@ -109,8 +109,8 @@ const sliderLists = [
     image: "/Shop/swirl.png",
     title: " A Fantastical Fusion of Fruity Fun",
     tub: "/tubs/unicornswirl.png",
-    measurements: "500ml",
-    price:'3.99£',
+    measurements: "500",
+    price:'3.99',
     description:
       "Unleash your inner child with this magical swirl of natural fruit flavors and vibrant, plant-based colors. It's a whimsical, sweet, and utterly enchanting treat for all ages.",
   },{
@@ -119,8 +119,8 @@ const sliderLists = [
     image: "/Shop/choco.png",
     title: "A Deep & Dreamy Chocolate Experience",
     tub: "/tubs/cosmiccocoa.png",
-    measurements: "500ml",
-    price:'3.99£',
+    measurements: "500",
+    price:'3.99',
     description:
       'Blast off into a universe of rich, dark, and decadent cocoa. Made with the finest organic cacao, this intensely chocolatey ice cream is an out-of-this-world experience.',
   },

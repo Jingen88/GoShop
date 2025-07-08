@@ -5,25 +5,38 @@ import { useState } from 'react';
 import { useGSAP } from '@gsap/react';
 import { ScoopShopButton } from '@/app/components/Buttons';
 import { useCart } from '../context/CartContext'; // Import useCart
+import Image from 'next/image';
+
+interface IceCreamItem {
+  id: number;
+  name: string;
+  title: string;
+  description: string;
+  image: string;
+  price: string;
+  measurements: string;
+  tub: string;
+}
+
 
 const Menu = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] =useState<number>(0);
   const { addToCart } = useCart(); // Get the addToCart function
 
   // GSAP animations remain the same
   useGSAP(() => {
-    //... (your gsap code is fine)
+    
   }, [currentIndex]);
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: number) => {
     const newIndex = (index + sliderLists.length) % sliderLists.length;
     setCurrentIndex(newIndex);
   };
 
   const handleAddToCart = () => {
-    const currentIceCream = sliderLists[currentIndex];
-    addToCart(currentIceCream);
-  };
+  const currentIceCream: IceCreamItem = sliderLists[currentIndex];
+  addToCart(currentIceCream);
+};
 
   const currentIceCream = sliderLists[currentIndex];
 
@@ -73,10 +86,12 @@ const Menu = () => {
 
        <div className="left-arrow flex flex-col items-center [grid-area:left] justify-self-end cursor-pointer gap-8">
             <button onClick={() => goToSlide(currentIndex - 1)} className="p-1">
-                <img 
-                src="/Shop/arrow-left.png" 
-                alt="Previous ice cream" 
-                className="w-[50px] transition-transform duration-200  cursor-pointer ease-in-out hover:scale-110"
+                <Image 
+                  src="/Shop/arrow-left.png" 
+                  alt="Previous ice cream" 
+                  width={50}
+                  height={50}
+                  className="w-[50px] transition-transform duration-200 cursor-pointer ease-in-out hover:scale-110"
                 />
             </button> 
             <div className="rubik-dirt text-black text-left mt-2 pl-10">
@@ -85,24 +100,29 @@ const Menu = () => {
             </div>
         </div>
 
+        
         <div className="icecream-image [grid-area:image] flex flex-col items-center">
-            <img 
+            <Image 
                 src={currentIceCream.image} 
                 alt={currentIceCream.name} 
+                width={300}
+                height={300}
                 className="object-contain max-w-sm h-auto" 
             />
         </div>
-        {/* End of unchanged JSX */}
-
 
         <div className="right-arrow flex flex-col items-center [grid-area:right] justify-self-start cursor-pointer gap-2">
             <button onClick={() => goToSlide(currentIndex + 1)} className="p-4">
-                <img 
-                src="/Shop/arrow-right.png" 
-                alt="Next ice cream" 
-                className="w-[50px] transition-transform duration-200 ease-in-out cursor-pointer hover:scale-110"
+                <Image 
+                  src="/Shop/arrow-right.png" 
+                  alt="Next ice cream" 
+                  width={50}
+                  height={50}
+                  className="w-[50px] transition-transform duration-200 ease-in-out cursor-pointer hover:scale-110"
                 />
             </button>
+            {/* ... existing code ... */}
+      
             <div className="mt-35 pr-8">
                 {/* Pass the onClick handler to the button */}
                 <ScoopShopButton onClick={handleAddToCart} /> 

@@ -4,6 +4,7 @@ import { useCart } from '../context/CartContext';
 import Image from 'next/image';
 import Link from 'next/link';
 
+
 const CheckoutPage = () => {
   const { cartItems, removeFromCart } = useCart(); // Add removeFromCart
 
@@ -47,8 +48,8 @@ const CheckoutPage = () => {
                       <Image src={item.tub} alt={item.name} width={80} height={80} className="rounded-md" />
                       <div className='flex flex-col gap-2 flex-grow'>
                         <h3 className="font-semibold text-black rubik-dirt">{item.name}</h3>
-                        <p className="text-sm text-gray-700">{item.measurements}</p>
-                        <p className="text-sm text-gray-700">{item.price}</p>
+                        <p className="text-sm text-gray-700">{item.measurements} ml</p>
+                        <p className="text-sm text-gray-700">{item.price}£</p>
                       </div>
                       <button
                         onClick={() => removeFromCart(index)}

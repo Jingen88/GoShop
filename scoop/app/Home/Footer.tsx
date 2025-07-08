@@ -25,14 +25,14 @@ const Footer = () => {
     });
 
   // --- Ice cream images falling animation  ---
-  const iceCreamImages = gsap.utils.toArray('.tubs img');
+  const iceCreamImages = gsap.utils.toArray<HTMLElement>('.tubs img');
   const footer = document.getElementById('contact');
   
   // Get the full width and height of the footer for positioning
   const footerWidth = footer?.offsetWidth || 1000;
   const footerHeight = footer?.offsetHeight || 1000;
 
-  iceCreamImages.forEach((img: any) => {
+  iceCreamImages.forEach((img) => {
     const duration = 15 + Math.random() * 10;
     const delay = Math.random() * 15;
     const rotation = (Math.random() * 360) - 180;
