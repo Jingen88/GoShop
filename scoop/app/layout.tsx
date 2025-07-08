@@ -1,10 +1,12 @@
 'use client'
-import type { Metadata } from "next";
 import { Geist, Geist_Mono, Rubik_Dirt } from "next/font/google";
 import "./globals.css";
 import { gsap } from "gsap"; // Import gsap
 import { ScrollTrigger } from "gsap/ScrollTrigger"; // Import ScrollTrigger
 import { useLayoutEffect } from "react"; // Import useLayoutEffect for client-side GSAP registration
+import { CartProvider } from "./context/CartContext";
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,8 +42,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${rubikdirt.variable} font-rubik-dirt antialiased`}
-      >
+      ><CartProvider>
         {children}
+        </CartProvider>
       </body>
     </html>
   );

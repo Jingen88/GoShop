@@ -6,6 +6,8 @@ import Filler from './Home/Filler'
 import Testimonials from './Home/Testimonials'
 import Shop from './Home/Shop' 
 import Footer from './Home/Footer'
+import Chat from './Home/Chat'
+
 
 
 
@@ -20,6 +22,7 @@ const page = () => {
     <Testimonials/>
     <Shop/>
     <Footer/>
+    <Chat/>
     </>
   )
 }

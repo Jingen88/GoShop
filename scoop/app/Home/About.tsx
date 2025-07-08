@@ -8,7 +8,7 @@ import  RotatingText  from '@/app/components/RotatingText';
 const About = () => {
     
     return (
-        <section  id='about' className='relative noisy overflow-hidden '>
+        <section  id='about' className='relative  overflow-hidden '>
             
             {/* The image container */}
             <div className="absolute top-0 left-0 w-1/2 h-full z-0 ">
@@ -28,8 +28,8 @@ const About = () => {
             {/* Your About Section Content */}
 <div className="relative z-20 flex flex-col items-center justify-center h-full w-full mt-20 p-8">
 
-<h1 className="text-6xl font-bold text-black mb-4 rubik-dirt flex flex-row">
-  Live the{" "} <RotatingText
+<h1 className="text-6xl font-bold text-black mb-6 rubik-dirt flex flex-row">
+  <span className='pt-2'>Live the</span>{" "} <RotatingText
     texts={['sweet', 'happy', 'joyious', 'delicious', 'lovelife']}
     mainClassName="px-2 sm:px-2 md:px-3 bg-[#F17475] text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
     staggerFrom={"last"}
@@ -37,10 +37,10 @@ const About = () => {
     animate={{ y: 0 }}
     exit={{ y: "-120%" }} 
     staggerDuration={0.025}
-    splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+    splitLevelClassName="overflow-hidden pb-4 sm:pb-1 md:pb-1"
     transition={{ type: "spring", damping: 30, stiffness: 400 }}
     rotationInterval={2000}
-  /> {" "} life
+  /> {" "} <span className='pt-2.5'>life</span>
 </h1>
 
                 <p className="text-xl text-black max-w-2xl rubik-dirt mb-8 text-left">
