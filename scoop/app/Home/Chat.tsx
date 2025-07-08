@@ -52,7 +52,7 @@ const Chat: React.FC = () => {
       setTimeout(() => {
         const welcomeMessage: Message = {
           role: 'assistant',
-          content: "Hey there! I'm Livy, your friendly guide to all things LoveLife! What scoop are you looking for today? �",
+          content: "Hey there! I'm Livy, your friendly guide to all things LoveLife! What scoop are you looking for today?",
         };
         setMessages([welcomeMessage]);
         setIsLoading(false);
