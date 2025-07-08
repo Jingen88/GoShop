@@ -1,7 +1,5 @@
 'use client'
-import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import gsap from 'gsap';
 import { ShopButton } from '@/app/components/Buttons';
 import  RotatingText  from '@/app/components/RotatingText';
 

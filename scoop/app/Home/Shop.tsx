@@ -3,7 +3,6 @@
 import { sliderLists } from '../constants/index.js';
 import { useState } from 'react';
 import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
 import { ScoopShopButton } from '@/app/components/Buttons';
 import { useCart } from '../context/CartContext'; // Import useCart
 

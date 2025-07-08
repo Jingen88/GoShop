@@ -59,9 +59,9 @@ const Hero = () => {
       },
       ease: "back.out(1.7)", // A bouncy ease for a playful effect
       // Use a function to apply fixed positions based on the staggered index (i)
-      x: (i, target) => fixedPositions[i].x,
-      y: (i, target) => fixedPositions[i].y,
-      rotation: (i, target) => fixedPositions[i].rotation,
+      x: (i, ) => fixedPositions[i].x,
+      y: (i, ) => fixedPositions[i].y,
+      rotation: (i, ) => fixedPositions[i].rotation,
       zIndex: 15 // Bring other ice creams to front (but still below logo) after animation starts
     }, '<0.2'); // Start 0.3 seconds after the logo animation begins (still after green ice cream)
   }, []); // Empty dependency array ensures this runs once on mount
