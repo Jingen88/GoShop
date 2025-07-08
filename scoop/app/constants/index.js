@@ -58,6 +58,8 @@ const socials = [
  },
 ];
 
+
+
 const sliderLists = [
   {
     id: 1,
@@ -125,6 +127,14 @@ const sliderLists = [
       'Blast off into a universe of rich, dark, and decadent cocoa. Made with the finest organic cacao, this intensely chocolatey ice cream is an out-of-this-world experience.',
   },
 ];
+
+const normalizedSliderLists = sliderLists.map(item => ({
+  ...item,
+  price: parseFloat(item.price) // Convert to number once
+}));
+
+// Then export the normalized version
+export { normalizedSliderLists as sliderLists };
 
 export {
  openingHours,

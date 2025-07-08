@@ -13,7 +13,7 @@ interface IceCreamItem {
   title: string;
   description: string;
   image: string;
-  price: string;
+  price: number;
   measurements: string;
   tub: string;
 }

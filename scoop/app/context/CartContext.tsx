@@ -5,9 +5,13 @@ import React, { createContext, useState, useContext, ReactNode } from 'react';
 interface CartItem {
   id: number;
   name: string;
+  title: string;
+  description: string;
+  image: string;
+  price: number; 
   measurements: string;
   tub: string;
-  price: number;
+  quantity?: number;
 }
 
 interface CartContextType {
