@@ -1,5 +1,5 @@
 'use client'
-import Image from 'next/image';
+
 import { ShopButton } from '@/app/components/Buttons';
 import  RotatingText  from '@/app/components/RotatingText';
 
@@ -7,20 +7,6 @@ const About = () => {
     
     return (
         <section  id='about' className='relative  overflow-hidden '>
-            
-            {/* The image container */}
-            <div className="absolute top-0 left-0 w-1/2 h-full z-0 ">
-                <Image id='a' src='/berrybliss.png' alt='ice cream' width={180} height={180} className='absolute' />
-                <Image id='b' src='/mochamagic.png' alt='ice cream' width={170} height={170} className='absolute' />
-                <Image id='c' src="/Pistachiohice.png" alt='ice cream' width={240} height={240} className='absolute' />
-                <Image id='d' src="/vanillavibe.png" alt='ice cream' width={140} height={140} className='absolute' />
-                <Image id='e' src="/unicornswirl.png" alt='ice cream' width={150} height={150} className='absolute' />
-                <Image id='f' src='/cosmiccocoa.png' alt='ice cream' width={120} height={120} className='absolute' />
-                <Image id='g' src='/berrybliss.png' alt='ice cream' width={200} height={200} className='absolute' />
-                <Image id='h' src="/Pistachiohice.png" alt='ice cream' width={160} height={160} className='absolute' />
-                <Image id='i' src='/unicornswirl.png' alt='ice cream' width={190} height={190} className='absolute' />
-                <Image id='j' src='/mochamagic.png' alt='ice cream' width={100} height={100} className='absolute' />
-            </div>
 
 {/* <div className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none "></div> */}
             {/* Your About Section Content */}
