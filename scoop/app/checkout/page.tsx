@@ -42,7 +42,7 @@ const CheckoutPage = () => {
             </h1>
             
             {/* Empty div for balance */}
-            <div className="w-5 h-5 md:w-6 md:h-6"></div>
+            <div className="w-5 h-5 md:w-36 md:h-16"></div>
           </div>
 
           {cartItems.length === 0 ? (
