@@ -157,7 +157,7 @@ const Chat: React.FC = () => {
       {/* Chat Bubble Toggle */}
       <button
   onClick={() => setIsOpen(!isOpen)}
-  className={`p-4 rounded-full text-black cursor-pointer shadow-lg transition-all duration-300 hover:scale-110 ${
+  className={`p-3 md:p-4 rounded-full text-black cursor-pointer shadow-lg transition-all duration-300 hover:scale-110 ${
     isOpen ? 'bg-red-500 hover:bg-red-600' : colors.primary
   }`}
   aria-label="Toggle Chat"
@@ -174,11 +174,12 @@ const Chat: React.FC = () => {
       </button>
 
       {/* Chat Window */}
-      <div
+       <div
         className={`
           ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}
           transition-all duration-500 ease-in-out
-          absolute bottom-20 right-0 w-80 sm:w-96 h-[60vh] bg-[${colors.background}] rounded-2xl shadow-2xl flex flex-col overflow-hidden border-4 border-white
+          absolute bottom-16 right-0 w-[90vw] max-w-[400px] h-[60vh] max-h-[500px]
+          bg-gray-50 rounded-2xl shadow-2xl flex flex-col overflow-hidden border-4 border-white
         `}
       >
         {/* Header */}

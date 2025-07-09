@@ -16,7 +16,7 @@ const CartButton = () => {
   return (
     <Link href="/checkout" passHref>
       <button
-        className={`group relative z-20 cursor-pointer flex items-center justify-center gap-2 px-3 py-2 text-base font-bold transition-all duration-300
+        className={`group relative z-20 cursor-pointer flex  items-center justify-center gap-2 px-3 py-2 text-base font-bold transition-all duration-300
           ${isHovered ? "animate-wobble" : ""}
           before:absolute before:inset-0 before:bg-[#90ccc7] before:opacity-90 before:rounded-[12px]  // Add rounded to before
           after:absolute after:inset-0 after:opacity-20 after:rounded-[12px]  // Add rounded to after

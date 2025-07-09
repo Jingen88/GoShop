@@ -86,23 +86,23 @@ const Footer = () => {
 
       
       {/* Content */}
-      <div className="mb-8 relative z-10">
-        <h2 className='text-4xl mb-15'>Where to Find Us</h2>
+      <div className="mb-6 md:mb-8 relative z-10 w-full max-w-2xl">
+        <h2 className='text-xl md:text-4xl mb-4 md:mb-8'>Where to Find Us</h2>
         
-         <div className='mb-8'>
-          <h3 className='mb-5 text-2xl'>Visit Our Ice Cream Shop</h3>
-          <p>L12 B89, London, 79 Buckley Street</p>
+         <div className='mb-4 md:mb-6'>
+          <h3 className='mb-2 md:mb-4 text-lg md:text-2xl'>Visit Our Ice Cream Shop</h3>
+          <p className='text-sm md:text-base'>L12 B89, London, 79 Buckley Street</p>
         </div>
         
-        <div className='mb-8'>
-          <h3 className='mb-5 text-2xl'>Contact Us</h3>
-          <p>(+44) 987-65678</p>
-          <p>hello@lovelife.co.uk</p>
+          <div className='mb-4 md:mb-6'>
+          <h3 className='mb-2 md:mb-4 text-lg md:text-2xl'>Contact Us</h3>
+          <p className='text-sm md:text-base'>(+44) 987-65678</p>
+          <p className='text-sm md:text-base'>hello@lovelife.co.uk</p>
         </div>
         
         
-        <div className='mb-8'>
-          <h3 className='mb-5 text-2xl'>Open Every Day</h3>
+       <div className='mb-4 md:mb-6'>
+          <h3 className='mb-2 md:mb-4 text-lg md:text-2xl'>Open Every Day</h3>
           {openingHours.map((time) => (
             <p key={time.day}>
               {time.day} : {time.time}
@@ -110,9 +110,9 @@ const Footer = () => {
           ))}
         </div>
         
-        <div className='mb-8'>
-          <h3 className='mb-5 text-2xl'>Follow Us</h3>
-          <div className="flex flex-row justify-center items-center gap-8">
+         <div className='mb-4 md:mb-6'>
+          <h3 className='mb-2 md:mb-4 text-lg md:text-2xl'>Follow Us</h3>
+          <div className="flex flex-row justify-center items-center gap-3 md:gap-6">
             {socials.map((social) => (
               <a
                 key={social.name}
@@ -121,7 +121,13 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label={social.name}
               >
-                <Image alt={social.name} width={44} height={44} className='hover:scale-110 transition-all duration-300' src={social.icon} />
+                <Image 
+                  alt={social.name} 
+                  width={32} 
+                  height={32} 
+                  className='w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-all duration-300' 
+                  src={social.icon} 
+                />
               </a>
             ))}
           </div>
