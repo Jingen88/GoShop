@@ -1,6 +1,6 @@
 'use client';
 import { sliderLists } from '../constants/index.js';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { ScoopShopButton } from '@/app/components/Buttons';
 import { useCart } from '../context/CartContext';
 import Image from 'next/image';
@@ -34,15 +34,15 @@ const Menu = () => {
   };
 
   // Swipe handlers
-  const handleTouchStart = (e: React.TouchEvent) => {
+  const handleTouchStart = (e: TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
   };
 
-  const handleTouchMove = (e: React.TouchEvent) => {
+  const handleTouchMove = (e: TouchEvent) => {
     touchEndX.current = e.touches[0].clientX;
   };
 
-  const handleTouchEnd = () => {
+  const handleTouchEnd = useCallback(() => {
     if (touchStartX.current - touchEndX.current > 50) {
       // Swipe left
       goToSlide(currentIndex + 1);
@@ -50,23 +50,23 @@ const Menu = () => {
       // Swipe right
       goToSlide(currentIndex - 1);
     }
-  };
+  }, [currentIndex]);
 
   // Add swipe event listeners
   useEffect(() => {
     const imageElement = imageRef.current;
     if (imageElement) {
-      imageElement.addEventListener('touchstart', handleTouchStart as any, { passive: true });
-      imageElement.addEventListener('touchmove', handleTouchMove as any, { passive: true });
-      imageElement.addEventListener('touchend', handleTouchEnd as any, { passive: true });
+      imageElement.addEventListener('touchstart', handleTouchStart, { passive: true });
+      imageElement.addEventListener('touchmove', handleTouchMove, { passive: true });
+      imageElement.addEventListener('touchend', handleTouchEnd, { passive: true });
 
       return () => {
-        imageElement.removeEventListener('touchstart', handleTouchStart as any);
-        imageElement.removeEventListener('touchmove', handleTouchMove as any);
-        imageElement.removeEventListener('touchend', handleTouchEnd as any);
+        imageElement.removeEventListener('touchstart', handleTouchStart);
+        imageElement.removeEventListener('touchmove', handleTouchMove);
+        imageElement.removeEventListener('touchend', handleTouchEnd);
       };
     }
-  }, [currentIndex]);
+  }, [currentIndex, handleTouchEnd]);
 
   const currentIceCream = sliderLists[currentIndex];
 
@@ -86,7 +86,7 @@ const Menu = () => {
      
       {/* Flavor Tabs */}
       <nav 
-        className="icecream-tabs flex flex-row justify-center gap-2 md:gap-8 w-full overflow-x-auto py-2 mb-4 md:mb-6"
+        className="icecream-tabs flex flex-row justify-center gap-2 md:gap-8 w-full overflow-x-auto py-2 mb-4 md:mb-1"
         aria-label="Scoop Shop Navigation"
       >
         {sliderLists.map((iceCream, index) => {
@@ -134,7 +134,7 @@ const Menu = () => {
         {/* Description */}
         <div className="text-center px-4 mb-6">
           <h3 className="rubik-dirt text-xl font-bold mb-2">{currentIceCream.title}</h3>
-          <p className="rubik-dirt text-sm text-gray-700">{currentIceCream.description}</p>
+          <p className="rubik-dirt text-sm text-black">{currentIceCream.description}</p>
         </div>
 
         {/* Add to Cart Button */}
