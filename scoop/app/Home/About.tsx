@@ -26,7 +26,7 @@ const About = () => {
         <p className="text-base md:text-xl text-black max-w-2xl rubik-dirt mb-8 text-left px-4">
           Welcome to a world of flavor! We are passionate about creating the most delicious and unique ice cream experiences.
         </p>
-        <ShopButton className="scale-90 md:scale-100" />
+        <ShopButton />
       </div>
     </section>
   );

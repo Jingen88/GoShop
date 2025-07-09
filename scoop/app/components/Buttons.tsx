@@ -67,6 +67,7 @@ const ShopButton = () => {
             hover:shadow-xl hover:shadow-black/20
             sm:px-4 sm:py-3 md:text-lg
             transform skew-x-1 rotate-1
+            scale-90 md:scale-100
             rounded-[12px] bg-gradient-to-r from-[#ff7500] to-[#ffb300]`}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
